@@ -13,8 +13,8 @@ const randomIntegerFromInterval = (min, max) => {
 
 const INTERVAL_TIME = 1000;
 
-const startBtn = document.querySelector('button[data-action="start"]');
-const stopBtn = document.querySelector('button[data-action="stop"]');
+const startBtn = document.querySelector('[data-action="start"]');
+const stopBtn = document.querySelector('[data-action="stop"]');
 
 let intervalId = null;
 
@@ -22,7 +22,7 @@ startBtn.addEventListener('click', onStartBtnClick);
 stopBtn.addEventListener('click', onStopBtnClick);
 
 function onStartBtnClick() {
-  startBtn.setAttribute('disable', '');
+  startBtn.setAttribute('disabled', '');
   intervalId = setInterval(getBgColor, INTERVAL_TIME);
 }
 
